@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/lawn-rescue/assets/hammer16-Dykob0kL.png" />
+    <!-- <link rel="icon" href="data:," /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whack-A-Mole</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Oxanium:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/lawn-rescue/assets/index-B9e78dO9.js"></script>
+    <link rel="stylesheet" crossorigin href="/lawn-rescue/assets/index-BRezFTuY.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="fence-div"></div>
+      <h1>Lawn Rescue</h1>
+    </header>
+    <main>
+      <section id="welcome-screen">
+        <div class="welcome-content">
+          <h2>🌱 Welcome to Lyn's Lawn Rescue! 🌱</h2>
+          <div class="storyline">
+            <p>
+              <img
+                class="story-lyn"
+                src="/lawn-rescue/assets/avatar-CXFgtlEJ.png"
+                alt="avatar icon"
+              />
+              <strong
+                >"Hi there! I'm Lyn, and I desperately need your help!"</strong
+              >
+            </p>
+            <p>
+              My beautiful backyard lawn has been completely destroyed by a
+              family of pesky moles!
+              <img
+                class="story-mole"
+                src="/lawn-rescue/assets/mole-BbEhDjMw.png"
+                alt="mole image"
+              />
+              <img
+                class="story-mole"
+                src="/lawn-rescue/assets/mole-BbEhDjMw.png"
+                alt="mole image"
+              />
+              They keep popping up everywhere, ruining all my hard work. I've
+              tried everything - sprinklers, repellents, even playing loud music
+              - but nothing works!
+            </p>
+            <p>
+              <strong>But here's the thing... </strong>my curious 2-year-old,
+              Charlie,
+              <img
+                class="story-baby"
+                src="/lawn-rescue/assets/happybaby-CG7XCj7Z.png"
+                alt="happy baby image"
+              />
+              thinks this is all a big game and keeps crawling around the yard
+              trying to "help." Charlie loves to pop up from behind bushes and
+              garden tools, giggling and having a blast.
+            </p>
+
+            <div class="mission-section">
+              <h3>Your Mission:</h3>
+              <p>
+                Help me catch those troublesome moles before they destroy what's
+                left of my lawn! But please, PLEASE be careful not to
+                accidentally bonk little Charlie with that hammer
+                <img
+                  class="story-hammer"
+                  src="/lawn-rescue/assets/thor-hammer-CXS28AgD.png"
+                  alt="hammer icon"
+                />
+                - one wrong hit and Charlie will cry, and I'll have to start all
+                over again!
+              </p>
+            </div>
+            <div class="challenge-section">
+              <h3>The Challenge:</h3>
+              <p>
+                You have limited time before my neighbors start complaining
+                about the mess. Work fast, aim carefully, and let's save my lawn
+                together!
+              </p>
+            </div>
+            <p class="cta">
+              <strong> Ready to help me reclaim my yard?</strong>
+            </p>
+          </div>
+          <p class="reminder">
+            <em
+              >Remember: Moles = Good! Charlie = Bad! (Well, not bad... just not
+              the target!)</em
+            >
+          </p>
+          <div class="welcome-buttons-div">
+            <button class="btn enter-lawn-btn" id="welcome-enter-lawn">
+              Enter Lawn
+            </button>
+            <button class="btn" id="welcome-rules">Rules</button>
+          </div>
+        </div>
+      </section>
+      <section id="mechanics-screen">
+        <div class="mechanics-content">
+          <h2>🎯 Game Rules & Mechanics 🎯</h2>
+          <div class="rules-storyline">
+            <p>
+              <strong>Ready to become a lawn hero?</strong
+              ><img
+                class="rules-thor"
+                src="/lawn-rescue/assets/thor-i_WlAxq6.png"
+                alt="star icon"
+              />Here's everything you need to know!
+            </p>
+            <div class="objective-section">
+              <h3>Your Mission:</h3>
+              <p>
+                Help Lyn save her lawn by whacking moles
+                <img
+                  class="story-mole"
+                  src="/lawn-rescue/assets/mole-BbEhDjMw.png"
+                  alt="mole image"
+                />
+                <img
+                  class="story-mole"
+                  src="/lawn-rescue/assets/mole-BbEhDjMw.png"
+                  alt="mole image"
+                />
+                while carefully avoiding baby Charlie. Every mole counts, but
+                one wrong hit resets everything!
+              </p>
+            </div>
+            <div class="scoring-section">
+              <h3>Scoring System:</h3>
+              <p>
+                <strong>Hit a Mole:</strong> +1 point
+                <img
+                  class="rules-star"
+                  src="/lawn-rescue/assets/star-CFyDsVn9.png"
+                  alt="star icon"
+                />
+                | <strong>Hit Baby Charlie:</strong> Score resets to 0
+                <img
+                  class="rules-babycry"
+                  src="/lawn-rescue/assets/babyhead-B03ffL12.png"
+                  alt="star icon"
+                />
+              </p>
+            </div>
+            <div class="gameplay-section">
+              <h3>Game Rules:</h3>
+              <p>
+                <strong>Time Limit:</strong> 60 seconds to get your best score.
+                Click or tap to whack
+                <img
+                  class="story-hammer"
+                  src="/lawn-rescue/assets/thor-hammer-CXS28AgD.png"
+                  alt="hammer icon"
+                />. Be quick but careful - Charlie is just trying to help!
+              </p>
+            </div>
+            <p class="mechanics-cta">
+              <strong>Ready to save Lyn's lawn?</strong>
+            </p>
+          </div>
+          <p class="mechanics-reminder">
+            <em>Remember: Speed matters, but accuracy is everything!</em>
+          </p>
+          <div class="mechanics-buttons-div">
+            <button class="btn" id="back-btn">Back</button>
+            <button class="btn enter-lawn-btn" id="mechanics-enter-lawn">
+              Enter Lawn
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="game-screen">
+        <section class="dashboard-container">
+          <div class="status-div">
+            <h2>Game status:</h2>
+            <div id="status">Ready</div>
+          </div>
+          <div class="timer-div">
+            <div id="time-display">
+              <!-- 00:00 -->
+            </div>
+          </div>
+          <div class="score-div">
+            <h2>Score:</h2>
+            <div id="score">00</div>
+          </div>
+        </section>
+        <section class="game-container">
+          <div class="box">
+            <div class="hole"></div>
+            <div class="image-container" id="top-left-container"></div>
+          </div>
+          <div class="box">
+            <div class="hole"></div>
+            <div class="image-container" id="top-center-container"></div>
+          </div>
+          <div class="box">
+            <div class="hole"></div>
+            <div class="image-container" id="top-right-container"></div>
+          </div>
+          <div class="box">
+            <div class="hole"></div>
+            <div class="image-container" id="center-left-container"></div>
+          </div>
+          <div class="box">
+            <div class="hole"></div>
+            <div class="image-container" id="center-center-container"></div>
+          </div>
+          <div class="box">
+            <div class="hole"></div>
+            <div class="image-container" id="center-right-container"></div>
+          </div>
+          <div class="box">
+            <div class="hole"></div>
+            <div class="image-container" id="bottom-left-container"></div>
+          </div>
+          <div class="box">
+            <div class="hole"></div>
+            <div class="image-container" id="bottom-center-container"></div>
+          </div>
+          <div class="box">
+            <div class="hole"></div>
+            <div class="image-container" id="bottom-right-container"></div>
+          </div>
+        </section>
+        <section class="controls-container">
+          <div class="mechanics-btn-div">
+            <button class="btn" id="game-rules">Rules</button>
+          </div>
+          <div class="start-end-btn-div">
+            <button class="btn" id="start-btn" type="button">Start</button>
+            <button class="btn" id="end-btn" type="button">End</button>
+          </div>
+          <div class="exit-btn-div">
+            <button class="btn" id="exit-btn" type="button">Exit</button>
+          </div>
+        </section>
+      </section>
+      <section id="game-over-screen"></section>
+    </main>
+  </body>
+</html>
+
+<!-- mole icon -->
+<!-- <a href="https://www.flaticon.com/free-icons/mole" title="mole icons">Mole icons created by Freepik - Flaticon</a> -->
+<!-- hammer -->
+<!-- <a href="https://www.flaticon.com/free-icons/hammer" title="hammer icons">Hammer icons created by Freepik - Flaticon</a> -->
+<!-- bonk sound -->
+<!-- Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=36055">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=36055">Pixabay</a> -->
+<!-- baby cry -->
+<!-- Sound Effect by <a href="https://pixabay.com/users/u_xg7ssi08yr-48039129/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=352645">LoLa Joy</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=352645">Pixabay</a> -->
+<!-- fence -->
+<!-- <a href="https://www.flaticon.com/free-icons/yard" title="yard icons">Yard icons created by mnauliady - Flaticon</a> -->
+<!-- fence2 -->
+<!-- <a href="https://www.flaticon.com/free-icons/fence" title="fence icons">Fence icons created by PixelVerse - Flaticon</a> -->
+<!-- fence3 -->
+<!-- vector icons -->
+<!-- avatar -->
+<!-- <a href="https://www.flaticon.com/free-icons/aunt" title="aunt icons">Aunt icons created by Chanut-is-Industries - Flaticon</a> -->
+<!-- thor and thor hammer, star-->
+<!-- freepik -->
+<!-- crybaby-head -->
+<!-- <a href="https://www.flaticon.com/free-icons/emoji" title="emoji icons">Emoji icons created by Smashicons - Flaticon</a> -->
