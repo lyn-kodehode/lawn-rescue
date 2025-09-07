@@ -7,14 +7,21 @@ let cry = null;
 // lazy loads the audio creation
 // Initialize sounds when first needed
 const soundsInit = () => {
+  // console.log("soundsInit called");
   if (!bonk) {
+    // console.log("Creating bonk sound...");
     bonk = new Howl({
-      src: ["src/assets/bonksound.mp3"],
+      src: ["./assets/bonksound.mp3"],
+      onload: () => console.log("Bonk loaded successfully!"),
+      onloaderror: (id, err) => console.log("Bonk load error:", err),
     });
   }
   if (!cry) {
+    // console.log("Creating cry sound...");
     cry = new Howl({
-      src: ["src/assets/babycry.mp3"],
+      src: ["./assets/babycry.mp3"],
+      onload: () => console.log("Cry loaded successfully!"),
+      onloaderror: (id, err) => console.log("Cry load error:", err),
     });
   }
 };
@@ -29,6 +36,11 @@ export const initializeSounds = () => {
 export const playBonk = () => {
   // create bonk if doesnt exist
   soundsInit();
+
+  // SOUND DEBGGING
+  // console.log("bonk exists:", bonk ? "yes" : "no");
+  // console.log("bonk state:", bonk ? bonk.state() : "no bonk");
+
   // starts at .55s
   bonk.seek(0.55);
   bonk.play();
