@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const achievementTitleDisplay = document.getElementById(
     "performance-title-display"
   );
+  const molesHitDisplay = document.getElementById("moles-hit-count");
+  const babiesHitDisplay = document.getElementById("babies-hit-count");
+  const timePlayedDisplay = document.getElementById("time-played");
   const leaderboardList = document.getElementById("leaderboard-list");
   const welcomeEnterLawnBtn = document.getElementById("welcome-enter-lawn");
   const mechanicsEnterLawnBtn = document.getElementById("mechanics-enter-lawn");
@@ -50,7 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let score = 0;
   let currentScreenId = "welcome-screen";
   let previousScreenId = null;
-  // let playerCounter = 1;
+  let molesHit = 0;
+  let babiesHit = 0;
+  let timedPlayed = 60;
 
   // ----------------------------------------------------------------------------- //
   // 3. UTILITY FUNCTIONS (declare before use)
@@ -162,6 +167,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update final score
     finalScoreDisplay.textContent = score;
 
+    // update game stats
+    molesHitDisplay.textContent = molesHit;
+    babiesHitDisplay.textContent = babiesHit;
+    timePlayedDisplay.textContent = `${timedPlayed - timeLeft}s`;
+
     // Update performance title
     const achievementTitle = getAchievementTitle(score);
     achievementTitleDisplay.textContent = achievementTitle;
@@ -189,6 +199,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const updateGameOverDisplayAndSave = () => {
     // update final score
     finalScoreDisplay.textContent = score;
+
+    // update game stats
+    timedPlayed = 60 - timeLeft;
+    molesHitDisplay.textContent = molesHit;
+    babiesHitDisplay.textContent = babiesHit;
+    timePlayedDisplay.textContent = `${timedPlayed - timeLeft}s`;
 
     // Update performance title
     const achievementTitle = getAchievementTitle(score);
@@ -362,6 +378,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "HIT! You hit the mole and earn a point -- keep HITTING!"
               );
               score++;
+              molesHit++;
               playBonk();
             });
           } else {
@@ -380,6 +397,7 @@ document.addEventListener("DOMContentLoaded", () => {
               baby.src = cryingBabyImg;
               console.log("OUCH! You hit the baby! Score goes back to ZERO. ");
               score = 0;
+              babiesHit++;
             });
           }
 
