@@ -12,8 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Oxanium:wght@200..800&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/lawn-rescue/assets/index-CdDCfOUY.js"></script>
-    <link rel="stylesheet" crossorigin href="/lawn-rescue/assets/index-D3cDs7yT.css">
+    <script type="module" crossorigin src="/lawn-rescue/assets/index-CHkVrAz-.js"></script>
+    <link rel="stylesheet" crossorigin href="/lawn-rescue/assets/index-ZizktdDz.css">
   </head>
 
   <body>
@@ -240,10 +240,86 @@
           </div>
         </section>
       </section>
-      <section id="game-over-screen"></section>
+      <section id="game-over-screen">
+        <div class="game-over-content">
+          <h2>🎉 Game Over! 🎉</h2>
+          <div class="final-stats">
+            <div class="final-score">
+              <h3>Final Score</h3>
+              <div id="final-score-display">00</div>
+            </div>
+
+            <div class="game-stats">
+              <h3>Game Stats</h3>
+              <div class="stat-item">
+                <span>Moles Hit:</span>
+                <span id="moles-hit-count">00</span>
+              </div>
+              <div class="stat-item">
+                <span>Babies Hit:</span>
+                <span id="babies-hit-count">00</span>
+              </div>
+              <div class="stat-item">
+                <span>Time Played:</span>
+                <span id="time-played">60s</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="performance-title">
+            <h3 id="performance-title-display">Lawn Defender!</h3>
+            <p id="performance-message">
+              You've protected Lyn's lawn with honor!
+            </p>
+          </div>
+
+          <div class="leaderboard">
+            <h3>🏆 Hall of Fame 🏆</h3>
+            <div id="leaderboard-list"></div>
+          </div>
+
+          <div class="game-over-buttons-div">
+            <button class="btn" id="play-again-btn">Play Again</button>
+            <button class="btn" id="back-to-welcome-btn">Exit</button>
+          </div>
+        </div>
+      </section>
     </main>
+    <!-- DIALOG  -->
+    <div class="dialog-overlay" id="name-dialog">
+      <div class="dialog-content">
+        <h3>🎉 Game Over! 🎉</h3>
+        <p class="score-display">
+          Your Score: <span id="dialog-score">00</span>
+        </p>
+        <div class="input-section">
+          <label for="dialog-name-input"
+            >Enter your name for the leaderboard:</label
+          >
+          <input
+            type="text"
+            id="dialog-name-input"
+            placeholder="Your name (optional)"
+            maxlength="10"
+          />
+        </div>
+        <div class="dialog-buttons">
+          <button class="btn dialog-btn" id="dialog-cancel">Cancel</button>
+          <button class="btn dialog-btn" id="dialog-save">Save Score</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+<!-- 
+"The Lawn Helper" (0-5 points)
+"The Mole Spotter" (6-10 points)
+"The Lawn Defender" (11-15 points)
+"The Mole Crusher" (16-20 points)
+"The Mole-cular Expert" (21-25 points)
+"The Baby Spotter" (26+ points)
+"The Mole-itary Commander" (27+ points)
+ -->
 
 <!-- mole icon -->
 <!-- <a href="https://www.flaticon.com/free-icons/mole" title="mole icons">Mole icons created by Freepik - Flaticon</a> -->
