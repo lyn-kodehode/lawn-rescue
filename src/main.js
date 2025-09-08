@@ -1,5 +1,10 @@
 import "./style.css";
-import { playBonk, playCry, initializeSounds } from "./modules/sounds.js";
+import {
+  playBonk,
+  playCry,
+  initializeSounds,
+  playClock,
+} from "./modules/sounds.js";
 
 // import images
 import moleImg from "/assets/mole.png";
@@ -91,17 +96,39 @@ document.addEventListener("DOMContentLoaded", () => {
     // console.log(`Current page: ${currentScreenId}`);
   };
 
+  // get score function
+  const getScoreColor = (score, container) => {
+    if (score >= 21) {
+      container.style.color = "gold";
+    } else if (score >= 11) {
+      container.style.color = "orange";
+    } else if (score >= 1) {
+      // gameScoreDisplay.style.color = "#8bc34a33";
+      container.style.color = "#4caf50";
+    } else {
+      container.style.color = "red";
+    }
+  };
+
   // displays updated score
   const updateGameScoreDisplay = () => {
     const formattedScore = String(score).padStart(2, "0");
     gameScoreDisplay.textContent = formattedScore;
     gameScoreDisplay.style.fontWeight = 600;
+    getScoreColor(score, gameScoreDisplay);
   };
 
   // displays game status: ready, playing, paused, finished
   const updateGameStatusDisplay = (statusText) => {
     gameStatusDisplay.textContent = statusText;
     gameStatusDisplay.style.fontWeight = 600;
+    if (gameStatusDisplay.textContent === "Ready") {
+      gameStatusDisplay.style.color = "orange";
+    } else if (gameStatusDisplay.textContent === "Playing") {
+      gameStatusDisplay.style.color = "blue";
+    } else {
+      gameStatusDisplay.style.color = "red";
+    }
   };
 
   // Get existing leaderboard from LocalStorage or create new array if empty
@@ -166,11 +193,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const updateGameOverDisplayNoSave = () => {
     // Update final score
     finalScoreDisplay.textContent = score;
+    getScoreColor(score, finalScoreDisplay);
 
     // update game stats
+    timedPlayed = timedPlayed - timeLeft;
     molesHitDisplay.textContent = molesHit;
+    getScoreColor(molesHit, molesHitDisplay);
     babiesHitDisplay.textContent = babiesHit;
-    timePlayedDisplay.textContent = `${timedPlayed - timeLeft}s`;
+    if (babiesHit > 0) {
+      babiesHitDisplay.style.color = "red";
+    }
+    timePlayedDisplay.textContent = `${timedPlayed}s`;
+    if (timedPlayed === 0) {
+      timePlayedDisplay.style.color = "red";
+    } else if (timedPlayed < 60) {
+      timePlayedDisplay.style.color = "orange";
+    }
 
     // Update performance title
     const achievementTitle = getAchievementTitle(score);
@@ -199,12 +237,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const updateGameOverDisplayAndSave = () => {
     // update final score
     finalScoreDisplay.textContent = score;
+    getScoreColor(score, finalScoreDisplay);
 
     // update game stats
-    timedPlayed = 60 - timeLeft;
+    timedPlayed = timedPlayed - timeLeft;
     molesHitDisplay.textContent = molesHit;
+    getScoreColor(molesHit, molesHitDisplay);
     babiesHitDisplay.textContent = babiesHit;
-    timePlayedDisplay.textContent = `${timedPlayed - timeLeft}s`;
+    if (babiesHit > 0) {
+      babiesHitDisplay.style.color = "red";
+    }
+    timePlayedDisplay.textContent = `${timedPlayed}s`;
+    if (timedPlayed === 0) {
+      timePlayedDisplay.style.color = "red";
+    } else if (timedPlayed < 60) {
+      timePlayedDisplay.style.color = "orange";
+    }
 
     // Update performance title
     const achievementTitle = getAchievementTitle(score);
@@ -410,9 +458,20 @@ document.addEventListener("DOMContentLoaded", () => {
               targetContainer.removeChild(targetContainer.children[0]);
             }
           }, 650);
+          if (timeLeft <= 40) {
+            gameTimeDisplay.style.color = "gold";
+          }
+          if (timeLeft <= 20) {
+            gameTimeDisplay.style.color = "orange";
+          }
 
-          if (timeLeft <= 0) {
+          if (timeLeft === 10) {
+            playClock();
+          }
+
+          if (timeLeft === 0) {
             gameOver();
+            gameTimeDisplay.style.color = "red";
           }
         }, 1000);
     }
@@ -470,6 +529,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Gameover screen
   // playagain
   playAgainBtn.addEventListener("click", () => {
+    initializeSounds();
+    showScreen("game-screen");
     resetGame();
   });
 

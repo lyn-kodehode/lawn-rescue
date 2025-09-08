@@ -535,13 +535,15 @@ main {
   color: var(--primary-font-color);
   font-size: 3vh;
   margin-bottom: 2vh;
+  font-weight: 600;
 }
 #final-score-display {
   font-size: 8vh;
   font-weight: bold;
   color: #4caf50;
   text-shadow: 0.2vh 0.2vh 0.4vh rgba(0, 0, 0, 0.3);
-  /* font-family: var(--header-font-family); */
+  font-family: var(--header-font-family);
+  font-weight: 500;
 }
 .stat-item {
   display: flex;
@@ -549,6 +551,12 @@ main {
   margin-bottom: 1vh;
   font-size: 2.5vh;
   color: var(--primary-font-color);
+  font-family: var(--header-font-family);
+}
+#moles-hit-count,
+#babies-hit-count,
+#time-played {
+  font-weight: 500;
 }
 .performance-title {
   text-align: center;
@@ -589,6 +597,7 @@ main {
   background: #ffffff4d;
   border-radius: 0.5vh;
   font-size: 2vh;
+  font-family: var(--normal-font-family);
 }
 .leaderboard-entry:first-child {
   background: rgba(255, 215, 0, 0.3); /* Gold for #1 */

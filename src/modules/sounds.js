@@ -3,6 +3,7 @@ import { Howl } from "howler";
 // dont create Howl objects immediately - wait til needed
 let bonk = null;
 let cry = null;
+let clock = null;
 
 // lazy loads the audio creation
 // Initialize sounds when first needed
@@ -20,6 +21,15 @@ const soundsInit = () => {
     // console.log("Creating cry sound...");
     cry = new Howl({
       src: ["./assets/babycry.mp3"],
+      onload: () => console.log("Cry loaded successfully!"),
+      onloaderror: (id, err) => console.log("Cry load error:", err),
+    });
+  }
+
+  if (!clock) {
+    clock = new Howl({
+      src: ["./assets/clock.mp3"],
+      loop: true,
       onload: () => console.log("Cry loaded successfully!"),
       onloaderror: (id, err) => console.log("Cry load error:", err),
     });
@@ -61,4 +71,13 @@ export const playCry = () => {
   setTimeout(() => {
     cry.stop();
   }, 750);
+};
+
+// play clock sound func to export
+export const playClock = () => {
+  soundsInit();
+  clock.play();
+  setTimeout(() => {
+    clock.stop();
+  }, 10000);
 };
