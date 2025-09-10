@@ -20,30 +20,23 @@ Clicking the GitHub pages link automatically starts up the project.
 
 The player is welcomed by the game's storyboard.
 
-![Lawn Rescue welcome screen image](dist/assets/welcome-screen.png).
+![Lawn Rescue welcome screen image](public/assets/welcome-screen.png).
 
 <!-- ![Lawn Rescue welcome screen image](./assets/welcome-screen.). -->
 
 Detailed mechanics for the game is available in the 'Rules' page.
-![Lawn Rescue game mechanics screen image](https://lyn-kodehode.github.io/lawn-rescue/assets/game-rules.png).
+![Lawn Rescue game mechanics screen image](public/assets/game-rules.png).
 
-Entering lawn
+Entering lawn is where the fun begins but ensuring that proper volume is set on the device is a MUST. The game starts by clicking 'Start'. The player can end the game before the one minute ends; however, doing this will not allow saving the game progress (score).
+![Lawn Rescue game screen image](public/assets/game-screen.png).
 
-<!-- The user is welcomed by a dashboard showing the number of saved and completed recipes.
-![Recipe manager dashboard image](./assets/dashboard.png)
-
-The user can visit the "My Recipes' link to view all incomplete recipes saved in the browser's local storage if there's any.
-![full recipe image](./assets/fullrecipe.png)
-Once a recipe is marked completed, it moves to the 'Completed Recipes' link.
-The user can also browse recipes by clicking 'All Recipes' or doscover more by using the search field.
-![recipe cards image](./assets/allrecipes.png) -->
+Whether the player finishes the game or viluntarily quits in advance, the option to view some game statistics such as score and locally saved score if there's any.
+![Lawn Rescue game over screen image](public/assets/game-over-screen.png).
 
 ## Credits/Acknowledgments
 
-<!-- Iconixar for the chef icon.
-Unsplash for background images.
-TheMealDB.com for free recipe API and database -->
+Pixabay and Flaticon for images and sounds used in the game.
 
 ## License
 
-<!-- IT-Utvikler AMO/Kodehode -->
+IT-Utvikler AMO/Kodehode
