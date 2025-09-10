@@ -19,10 +19,13 @@ Clicking the GitHub pages link automatically starts up the project.
 ## How to Play
 
 The player is welcomed by the game's storyboard.
-![Lawn Rescue welcome screen image](https://lynmichaels.github.io/lawn-rescue/assets/welcome-screen.png).
+
+![Lawn Rescue welcome screen image](https://lyn-kodehode.github.io/lawn-rescue/assets/welcome-screen.png).
+
+<!-- ![Lawn Rescue welcome screen image](./assets/welcome-screen.). -->
 
 Detailed mechanics for the game is available in the 'Rules' page.
-![Lawn Rescue game mechanics screen image](https://lynmichaels.github.io/lawn-rescue/assets/game-rules.png).
+![Lawn Rescue game mechanics screen image](https://lyn-kodehode.github.io/lawn-rescue/assets/game-rules.png).
 
 Entering lawn
 
