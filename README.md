@@ -16,10 +16,15 @@ Used HTML, CSS, JavaScript, Vite, Howler
 
 Clicking the GitHub pages link automatically starts up the project.
 
-## How to Use
+## How to Play
 
 The player is welcomed by the game's storyboard.
-![Lawn Rescue welcome screen image](.public/assets/welcome-screen.png)
+![Lawn Rescue welcome screen image](https://lynmichaels.github.io/lawn-rescue/assets/welcome-screen.png).
+
+Detailed mechanics for the game is available in the 'Rules' page.
+![Lawn Rescue game mechanics screen image](https://lynmichaels.github.io/lawn-rescue/assets/game-rules.png).
+
+Entering lawn
 
 <!-- The user is welcomed by a dashboard showing the number of saved and completed recipes.
 ![Recipe manager dashboard image](./assets/dashboard.png)
