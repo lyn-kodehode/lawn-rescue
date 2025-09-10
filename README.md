@@ -20,7 +20,7 @@ Clicking the GitHub pages link automatically starts up the project.
 
 The player is welcomed by the game's storyboard.
 
-![Lawn Rescue welcome screen image](https://lyn-kodehode.github.io/lawn-rescue/assets/welcome-screen.png).
+![Lawn Rescue welcome screen image](public/assets/welcome-screen.png).
 
 <!-- ![Lawn Rescue welcome screen image](./assets/welcome-screen.). -->
 
