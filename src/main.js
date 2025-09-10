@@ -461,7 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (timeLeft <= 40) {
             gameTimeDisplay.style.color = "gold";
           }
-          if (timeLeft <= 20) {
+          if (timeLeft <= 25) {
             gameTimeDisplay.style.color = "orange";
           }
 
@@ -469,9 +469,13 @@ document.addEventListener("DOMContentLoaded", () => {
             playClock();
           }
 
+          if (timeLeft <= 10) {
+            gameTimeDisplay.style.color = "red";
+          }
+
           if (timeLeft === 0) {
             gameOver();
-            gameTimeDisplay.style.color = "red";
+            // gameTimeDisplay.style.color = "red";
           }
         }, 1000);
     }
@@ -479,6 +483,21 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----------------------------------------------------------------------------- //
   // 5. EVENT LISTENERS (after all functions are declared)
   // ----------------------------------------------------------------------------- //
+  // cursor on mousedown
+  document.addEventListener("mousedown", () => {
+    document.body.classList.add("mousedown");
+  });
+
+  // cursor on mouseup
+  document.addEventListener("mouseup", () => {
+    document.body.classList.remove("mousedown");
+  });
+
+  // Handle when mouse leaves the window
+  // document.addEventListener("mouseleave", () => {
+  //   document.body.classList.remove("mousedown");
+  // });
+
   // Welcome screen buttons
   welcomeEnterLawnBtn.addEventListener("click", () => {
     showScreen("game-screen");

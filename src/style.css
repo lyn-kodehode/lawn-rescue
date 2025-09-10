@@ -21,10 +21,24 @@
   padding: 0;
   box-sizing: border-box;
 }
-body,
+/* body,
 html {
   cursor: url("/assets/hammer32.png"), auto;
+  cursor: url("/assets/thor-hammer-straight.png"), auto;
+} */
+
+body {
+  cursor: url("/assets/thor-hammer-left-45.png"), auto;
 }
+
+body.mousedown {
+  cursor: url("/assets/thor-hammer-left-down.png"), auto;
+}
+
+/* .cursor-on-click {
+  cursor: url("/assets/thor-hammer-left-45.png"), auto;
+} */
+
 header {
   position: relative;
   height: 10vh;
@@ -400,7 +414,8 @@ main {
   transform: translateY(-0.2vh);
 }
 .hole {
-  width: 15vw;
+  /* width: 15vw; */
+  width: 25vw;
   height: 5vh;
   /* width: 12vw;
   height: 4vh; */
@@ -412,7 +427,7 @@ main {
 }
 .mole,
 .baby {
-  width: 10vw;
+  width: 14vw;
   height: 16vh;
   /* height: 14vh; */
   /* width: 15vw; */
@@ -430,10 +445,10 @@ main {
 }
 .image-container {
   height: 18vh;
-  width: 10vw;
+  width: 12vw;
   /* height: 100%; */
   /* width: 100%; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: absolute;
 }
 
