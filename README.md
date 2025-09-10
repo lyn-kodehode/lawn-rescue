@@ -19,7 +19,7 @@ Clicking the GitHub pages link automatically starts up the project.
 ## How to Use
 
 The player is welcomed by the game's storyboard.
-![Lawn Rescue welcome screen image](/assets/welcome-screen.png)
+![Lawn Rescue welcome screen image]("/assets/welcome-screen.png")
 
 <!-- The user is welcomed by a dashboard showing the number of saved and completed recipes.
 ![Recipe manager dashboard image](./assets/dashboard.png)
