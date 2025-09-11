@@ -76,6 +76,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const formattedSeconds = String(seconds).padStart(2, "0");
 
     gameTimeDisplay.textContent = `${formattedMinutes}:${formattedSeconds}`;
+    gameTimeDisplay.style.color = "#2c5530";
+
+    if (timeLeft <= 40) {
+      gameTimeDisplay.style.color = "gold";
+    }
+    if (timeLeft <= 25) {
+      gameTimeDisplay.style.color = "orange";
+    }
+
+    if (timeLeft <= 10) {
+      gameTimeDisplay.style.color = "red";
+    }
   };
 
   // randomizer function
@@ -458,20 +470,20 @@ document.addEventListener("DOMContentLoaded", () => {
               targetContainer.removeChild(targetContainer.children[0]);
             }
           }, 650);
-          if (timeLeft <= 40) {
-            gameTimeDisplay.style.color = "gold";
-          }
-          if (timeLeft <= 25) {
-            gameTimeDisplay.style.color = "orange";
-          }
+          // if (timeLeft <= 40) {
+          //   gameTimeDisplay.style.color = "gold";
+          // }
+          // if (timeLeft <= 25) {
+          //   gameTimeDisplay.style.color = "orange";
+          // }
 
           if (timeLeft === 10) {
             playClock();
           }
 
-          if (timeLeft <= 10) {
-            gameTimeDisplay.style.color = "red";
-          }
+          // if (timeLeft <= 10) {
+          //   gameTimeDisplay.style.color = "red";
+          // }
 
           if (timeLeft === 0) {
             gameOver();
@@ -500,8 +512,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Welcome screen buttons
   welcomeEnterLawnBtn.addEventListener("click", () => {
-    showScreen("game-screen");
     resetGame();
+    showScreen("game-screen");
   });
 
   welcomeRulesBtn.addEventListener("click", () => {
@@ -512,8 +524,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Mechanics screen buttons
   mechanicsEnterLawnBtn.addEventListener("click", () => {
     initializeSounds();
-    showScreen("game-screen");
     resetGame();
+    showScreen("game-screen");
   });
   goBackBtn.addEventListener("click", () => {
     if (previousScreenId) {
@@ -549,8 +561,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // playagain
   playAgainBtn.addEventListener("click", () => {
     initializeSounds();
-    showScreen("game-screen");
     resetGame();
+    showScreen("game-screen");
   });
 
   // back to welcome screen btn
